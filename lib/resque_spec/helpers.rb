@@ -1,6 +1,5 @@
 module ResqueSpec
   module Helpers
-
     def with_resque
       original = ResqueSpec.inline
       begin
@@ -20,6 +19,5 @@ module ResqueSpec
         ResqueSpec.disable_ext = original
       end
     end
-
   end
 end

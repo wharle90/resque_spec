@@ -1,6 +1,7 @@
 require 'resque_spec/ext'
 require 'resque_spec/helpers'
-require 'resque_spec/matchers'
+require 'resque_spec/in_queue_helper'
+require 'resque_spec/schedule_queue_helper'
 
 module ResqueSpec
   include Resque::Helpers
@@ -105,5 +106,4 @@ module ResqueSpec
   end
 end
 
-config = RSpec.configuration
-config.include ResqueSpec::Helpers
+include ResqueSpec::Helpers
